@@ -6,6 +6,8 @@ A simple utility tool to test word2vec models (with the github.com/sajari/word2v
 
 `word2vec-tester -b <pre-trained_binary_path>`
 
+It'll start a local server at `localhost:3333`
+
 # Build
 
 1. Clone the repo
