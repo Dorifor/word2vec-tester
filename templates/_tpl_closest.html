@@ -1,0 +1,3 @@
+<ol class="closest">
+    {{ range $word := . }}<li>{{ $word.Word }}: {{ $word.Score }}</li>{{ end }}
+</ol>

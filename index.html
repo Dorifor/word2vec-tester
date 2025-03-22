@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/sakura.css">
+    <script src="static/htmx.min.js"></script>
+    <title>Word2Vec Tester</title>
+</head>
+<body>
+    <h1>Word2Vec Tester</h1>
+    <p><b>Model:</b> {{ . }}</p>
+    <h2>Closest</h2>
+    <form hx-post="/closest" hx-target=".closest-result" hx-swap="innerHTML">
+        <label>Word: <input type="text" name="word"></label>
+        <label>Count: <input type="number" name="count" value="10"></label>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="closest-result">
+    </div>
+    <hr>
+    <h2>Similarity</h2>
+    <form hx-post="/similar" hx-target=".similarity-result" hx-swap="innerHTML">
+        <label>Word1: <input type="text" name="word1"></label>
+        <label>Word2: <input type="text" name="word2"></label>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="similarity-result"></div>
+</body>
+</html>
